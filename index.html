@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('food')">Food</button>
+    <button onclick="filterImages('vadodara')">Vadodara</button>
+  </div>
+
+  <div class="gallery">
+    <img src="images/burger.jpeg" class="gallery-img food" onclick="openLightbox(this)">
+    <img src="images/coffee.jpeg" class="gallery-img food" onclick="openLightbox(this)">
+    <img src="images/maggi.jpg" class="gallery-img food" onclick="openLightbox(this)">
+    <img src="images/manchurian.jpg" class="gallery-img food" onclick="openLightbox(this)">
+    <img src="images/milkshake.jpeg" class="gallery-img food" onclick="openLightbox(this)">
+    <img src="images/pasta.png" class="gallery-img food" onclick="openLightbox(this)">
+    <img src="images/pizza-2.jpg" class="gallery-img food" onclick="openLightbox(this)">
+    <img src="images/sandwich.jpeg" class="gallery-img food" onclick="openLightbox(this)">
+
+    <img src="images/kirti-mandir.jpg" class="gallery-img vadodara " onclick="openLightbox(this)">
+    <img src="images/mandvi gate.jpg" class="gallery-img vadodara" onclick="openLightbox(this)">
+    <img src="images/sursagar.jpg" class="gallery-img vadodara" onclick="openLightbox(this)">
+    <img src="images/sou.png" class="gallery-img vadodara" onclick="openLightbox(this)">
+    <img src="images/Nilkanth-Dham-Poicha.jpg" class="gallery-img vadodara" onclick="openLightbox(this)">
+    <img src="images/palace.jpeg" class="gallery-img vadodara" onclick="openLightbox(this)">
+    <img src="images/kavi-kamboi.jpeg" class="gallery-img vadodara" onclick="openLightbox(this)">
+    <img src="images/tapovan mandir.jpg" class="gallery-img vadodara" onclick="openLightbox(this)">
+
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <button class="next" onclick="changeImage(1)">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
